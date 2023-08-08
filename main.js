@@ -14,49 +14,77 @@
 
 // document.querySelector("button").addEventListener("click", handelClick);
 
+const word0 = {
+  original: "Good",
+  translation: "Отлично",
+};
+
 // const word0 = "Good";
 // const word0translate = "Отлично";
 
 // const word1 = "Boy";
 // const word1translate = "Парень";
 
+const word1 = {
+  original: "Boy",
+  translation: "Парень",
+};
+
 // const word2 = "Pragrammist";
 // const word2translate = "Праграммист";
 
-// const wordLeng = 3;
+const word2 = {
+  original: "Pragrammist",
+  translation: "Праграммист",
+};
+
+const wordLeng = 3;
+
+const resultMessages = {
+  finishGood: "Молодец. Good test",
+  finishFalse: "Молодец. папробуй еще все получится!",
+};
 
 // const finishGoodMessage = "Молодец. Good test";
 // const finishFalseMessage = "Молодец. папробуй еще все получится!";
 
 // let counter = 0;
 
+const settings = {
+  procentTest: 50,
+};
+
+const result = {
+  counter: 0,
+};
+
 // const procentTest = 50;
 
-// const userAnswer0 = window.prompt(word0);
-// document.write(userAnswer0);
-// if (userAnswer0 === word0translate) {
-//   counter = counter += 1;
-// }
+const userAnswer0 = window.prompt(word0.original);
+document.write(userAnswer0);
+if (userAnswer0 === word0.translate) {
+  result.counter = result.counter += 1;
+}
 
-// const userAnswer1 = window.prompt(word1);
-// document.write(userAnswer1 === word1translate);
-// if (userAnswer1 === word1translate) {
-//   counter = counter += 1;
-// }
+const userAnswer1 = window.prompt(word1.original);
+document.write(userAnswer1 === word1.translate);
+if (userAnswer1 === word1.translate) {
+  result.counter = result.counter += 1;
+}
 
-// const userAnswer2 = window.prompt(word2);
-// document.write(userAnswer2 === word2translate);
-// if (userAnswer2 === word2translate) {
-//   counter = counter += 1;
-// }
+const userAnswer2 = window.prompt(word2.original);
+document.write(userAnswer2 === word2.translate);
+if (userAnswer2 === word2.translate) {
+  result.counter = result.counter += 1;
+}
 
-// const countWordleng = (counter / wordLeng) * 100;
+const countWordleng = (result.counter / wordLeng) * 100;
 
-// if (countWordleng > procentTest) {
-//   alert(finishGoodMessage);
-// } else {
-//   alert(finishFalseMessage);
-// }
+if (countWordleng > settings.procentTest) {
+  alert(resultMessages.finishGood);
+} else {
+  alert(resultMessages.finishFalse);
+}
 
 // document.write("Start", "<br>");
 
@@ -126,7 +154,7 @@
 //   console.log("Is not coercion input");
 // }
 
-const product1 = 100;
-const product2 = 200;
+// const product1 = 100;
+// const product2 = 200;
 
-console.log(product1 < product2);
+// console.log(product1 < product2);
