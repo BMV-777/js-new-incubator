@@ -14,71 +14,80 @@
 
 // document.querySelector("button").addEventListener("click", handelClick);
 
-const word0 = {
-  original: "Good",
-  translation: "Отлично",
+const worldMessages = {
+  words: {
+    word0: {
+      original: "Good",
+      translation: "Отлично",
+    },
+    word1: {
+      original: "Boy",
+      translation: "Парень",
+    },
+    word2: {
+      original: "Pragrammist",
+      translation: "Праграммист",
+    },
+  },
+  counter: 0,
 };
 
-// const word0 = "Good";
-// const word0translate = "Отлично";
+// const word0 = {
+//   original: "Good",
+//   translation: "Отлично",
+// };
 
-// const word1 = "Boy";
-// const word1translate = "Парень";
+// const word1 = {
+//   original: "Boy",
+//   translation: "Парень",
+// };
 
-const word1 = {
-  original: "Boy",
-  translation: "Парень",
-};
-
-// const word2 = "Pragrammist";
-// const word2translate = "Праграммист";
-
-const word2 = {
-  original: "Pragrammist",
-  translation: "Праграммист",
-};
+// const word2 = {
+//   original: "Pragrammist",
+//   translation: "Праграммист",
+// };
 
 const wordLeng = 3;
 
 const resultMessages = {
+  start: {
+    result: "hello men Cood like",
+  },
   finishGood: "Молодец. Good test",
   finishFalse: "Молодец. папробуй еще все получится!",
 };
 
-// const finishGoodMessage = "Молодец. Good test";
-// const finishFalseMessage = "Молодец. папробуй еще все получится!";
-
-// let counter = 0;
+alert(resultMessages.start.result);
 
 const settings = {
   procentTest: 50,
 };
 
-const result = {
-  counter: 0,
-};
+// const result = {
+//   counter: 0,
+// };
 
 // const procentTest = 50;
 
-const userAnswer0 = window.prompt(word0.original);
-document.write(userAnswer0);
-if (userAnswer0 === word0.translate) {
-  result.counter = result.counter += 1;
+const userAnswer0 = window.prompt(worldMessages.words.word0.original);
+alert(userAnswer0 === worldMessages.words.word0.translation);
+if (userAnswer0 === worldMessages.words.word0.translation) {
+  worldMessages.counter = worldMessages.counter += 1;
 }
 
-const userAnswer1 = window.prompt(word1.original);
-document.write(userAnswer1 === word1.translate);
-if (userAnswer1 === word1.translate) {
-  result.counter = result.counter += 1;
+const userAnswer1 = window.prompt(worldMessages.words.word1.original);
+alert(userAnswer1 === worldMessages.words.word1.translation);
+if (userAnswer1 === worldMessages.words.word1.translation) {
+  worldMessages.counter = worldMessages.counter += 1;
 }
 
-const userAnswer2 = window.prompt(word2.original);
-document.write(userAnswer2 === word2.translate);
-if (userAnswer2 === word2.translate) {
-  result.counter = result.counter += 1;
+const userAnswer2 = window.prompt(worldMessages.words.word2.original);
+alert(userAnswer2 === worldMessages.words.word2.translation);
+if (userAnswer2 === worldMessages.words.word2.translation) {
+  worldMessages.counter = worldMessages.counter += 1;
 }
 
-const countWordleng = (result.counter / wordLeng) * 100;
+const countWordleng = (worldMessages.counter / wordLeng) * 100;
 
 if (countWordleng > settings.procentTest) {
   alert(resultMessages.finishGood);
